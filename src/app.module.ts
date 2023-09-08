@@ -8,7 +8,7 @@ import { ExchangersModule } from './exchangers/exchangers.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: `.development.env`
+      envFilePath: `.env`
     }),
     MongooseModule.forRoot(`mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASSWORD}@exchangers.vspue78.mongodb.net/ano-exchangers`),
     CoinsModule,
